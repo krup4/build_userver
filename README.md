@@ -12,6 +12,10 @@
 - `measure.sh` создаёт fresh service, собирает CBA 1.6.0, делает замеры,
   переносит include `cluster.hpp` из `.hpp` в `.cpp` и повторяет замеры.
 
+Сырой вывод Clang Build Analyzer:
+- `baseline.txt` - до оптимизации
+- `optimized.txt` - после оптимизации
+
 Используются Clang 14, Release, `-j4`, time-trace ON и ccache OFF.
 Для каждой версии выполняются одна чистая сборка для CBA и ещё три чистые сборки
 для замера времени. Установка инструментов и настройка CMake в замеры не входят.
